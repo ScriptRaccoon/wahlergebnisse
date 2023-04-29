@@ -30,7 +30,7 @@
 	<Button
 		on:click={increment_year}
 		disabled={year >= max_year}
-		aria_label="Jahr erhöhen"
+		aria_label="Jahr vor"
 	>
 		<img src={caretright} alt="arrow right" aria-hidden="true" />
 	</Button>
