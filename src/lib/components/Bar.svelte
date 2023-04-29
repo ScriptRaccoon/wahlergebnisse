@@ -15,8 +15,6 @@
 	}
 </script>
 
-<span class="percent">{Math.round($percent_store)}%</span>
-
 <div
 	class="bar"
 	class:small={result.percent < 5}
@@ -25,6 +23,8 @@
 >
 	<span class="label">{result.party.name}</span>
 </div>
+
+<span class="percent">{Math.round($percent_store)}%</span>
 
 <style>
 	.bar {
@@ -35,6 +35,7 @@
 		align-items: center;
 		border-radius: 0.2rem;
 		position: relative;
+		grid-column: 2;
 	}
 
 	.label {
@@ -54,13 +55,14 @@
 	}
 
 	.percent {
+		grid-column: 1;
 		font-size: 1.25rem;
 	}
 
 	@media (min-width: 34rem) {
 		.bar {
 			grid-row: 1;
-			flex-direction: column-reverse;
+			grid-column: auto;
 			align-self: end;
 			height: calc(var(--percent) * 1%);
 			width: 100%;
@@ -68,6 +70,7 @@
 
 		.percent {
 			grid-row: 2;
+			grid-column: auto;
 			align-self: start;
 			justify-self: center;
 		}

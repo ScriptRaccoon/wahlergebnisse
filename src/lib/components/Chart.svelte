@@ -16,6 +16,7 @@
 		margin-block: 1.5rem;
 		padding-block: 1.5rem;
 		display: grid;
+		grid-auto-flow: row dense;
 		grid-template-columns: 2.5rem 1fr;
 		align-items: center;
 		gap: 1rem;
