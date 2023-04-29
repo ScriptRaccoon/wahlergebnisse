@@ -27,7 +27,7 @@
 <div
 	class="bar"
 	class:ready
-	data-name={result.party.name}
+	class:small={result.percent < 5}
 	style:--color={result.party.color}
 	style:--percent={$percent_store * (100 / max_percent)}
 >
@@ -45,25 +45,24 @@
 		position: relative;
 	}
 
-	.bar::before {
-		content: attr(data-name);
-		position: absolute;
-		z-index: -1;
-		padding: 0.5rem;
-		font-weight: bold;
-		text-shadow: 0rem 0rem 0.2rem black, 0rem 0rem 0.1rem black,
-			0rem 0rem 0.1rem black, 0rem 0rem 0.1rem black;
-	}
-
 	.bar.ready {
 		width: calc(var(--percent) * 1%);
 	}
 
 	.label {
+		position: absolute;
 		color: white;
-		padding: 0.5rem;
 		font-weight: bold;
 		z-index: 1;
+		transition: color 1000ms ease-in-out, left 500ms ease-in-out,
+			bottom 500ms ease-in-out;
+		left: 0;
+		padding: 0.25rem 0.5rem;
+	}
+
+	.bar.small .label {
+		color: black;
+		left: 100%;
 	}
 
 	.percent {
@@ -88,6 +87,17 @@
 			grid-row: 2;
 			align-self: start;
 			justify-self: center;
+		}
+
+		.label {
+			width: 100%;
+			text-align: center;
+			bottom: 0;
+		}
+
+		.bar.small .label {
+			left: 0;
+			bottom: 100%;
 		}
 	}
 </style>
