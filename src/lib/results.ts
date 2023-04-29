@@ -9,10 +9,11 @@ const parties: party[] = [
 	{ color: "firebrick", name: "PARTEI" },
 ];
 
-export function generate_random_results(): results {
+export function generate_random_results(
+	number_of_years: number = 10
+): results {
 	const this_year = new Date().getFullYear();
 
-	const number_of_years = 10;
 	const results: results = [];
 
 	const initial_results: results = parties.map((party) => ({
@@ -31,10 +32,10 @@ export function generate_random_results(): results {
 		const percentages = rand_ints_with_sum(length, 100);
 
 		const filled_results: results = initial_results.map(
-			(res, i) => ({
-				...res,
+			(result, i) => ({
+				...result,
 				percent: percentages[i],
-				year: year,
+				year,
 			})
 		);
 

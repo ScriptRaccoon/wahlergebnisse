@@ -18,3 +18,7 @@ body {
 	border-radius: 0.4rem;
 	isolation: isolate;
 }
+
+.opaque {
+	opacity: 0.7;
+}

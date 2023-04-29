@@ -2,12 +2,11 @@
 	import Bar from "./Bar.svelte";
 
 	export let results: results;
-	export let max_percent: number;
 </script>
 
 <div class="card chart">
 	{#each results as result}
-		<Bar {result} {max_percent} />
+		<Bar {result} />
 	{/each}
 </div>
 

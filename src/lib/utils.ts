@@ -13,12 +13,12 @@ function rand_int(a: number, b: number) {
  * @returns array of random non-negative integers whose sum is the given sum
  */
 export function rand_ints_with_sum(length: number, sum: number) {
-	let result: number[] = new Array(length).fill(0);
+	let array: number[] = new Array(length).fill(0);
 
 	for (let s = 0; s < sum; s++) {
 		const index = rand_int(0, length - 1);
-		result[index] += 1;
+		array[index] += 1;
 	}
 
-	return result;
+	return array;
 }

@@ -1,28 +1,22 @@
 <header>
 	<h1 aria-describedby="aside">
-		Wahlergebnisse<span class="star" aria-hidden="true">*</span>
+		Wahlergebnisse<span class="opaque" aria-hidden="true">*</span>
 	</h1>
 </header>
 
-<aside id="aside">
+<aside id="aside" class="opaque">
 	<span aria-hidden="true">*</span>Fiktive Zahlen
 </aside>
 
 <style>
 	header {
 		text-align: center;
-		padding-top: 2rem;
-		padding-bottom: 1rem;
+		padding-block: 2rem 1rem;
 	}
 
 	h1 {
 		font-weight: 600;
 		font-size: 2.5rem;
-	}
-
-	.star,
-	aside {
-		opacity: 0.7;
 	}
 
 	aside {

@@ -2,6 +2,7 @@
 	import caretleft from "../../assets/caret-left.svg";
 	import caretright from "../../assets/caret-right.svg";
 	import Button from "./Button.svelte";
+
 	export let year: number;
 	export let min_year: number;
 	export let max_year: number;
@@ -23,16 +24,25 @@
 		disabled={year <= min_year}
 		aria_label="Jahr zurück"
 	>
-		<img src={caretleft} alt="arrow left" aria-hidden="true" />
+		<img
+			src={caretleft}
+			alt="Pfeil nach links"
+			aria-hidden="true"
+		/>
 	</Button>
 
 	<div class="year" aria-live="polite">{year}</div>
+
 	<Button
 		on:click={increment_year}
 		disabled={year >= max_year}
 		aria_label="Jahr vor"
 	>
-		<img src={caretright} alt="arrow right" aria-hidden="true" />
+		<img
+			src={caretright}
+			alt="Pfeil nach rechts"
+			aria-hidden="true"
+		/>
 	</Button>
 </menu>
 

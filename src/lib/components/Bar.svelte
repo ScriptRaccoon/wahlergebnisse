@@ -1,14 +1,18 @@
 <script lang="ts">
 	import { tweened } from "svelte/motion";
 	import { cubicInOut } from "svelte/easing";
+	import { getContext } from "svelte";
 
 	export let result: result;
-	export let max_percent: number;
 
-	const percent_store = tweened(result.percent, {
+	const max_percent = getContext<number>("max_percent");
+
+	const tween_options = {
 		duration: 1200,
 		easing: cubicInOut,
-	});
+	};
+
+	const percent_store = tweened(result.percent, tween_options);
 
 	$: {
 		$percent_store = result.percent;
