@@ -6,7 +6,7 @@
 	export let result: result;
 	export let max_percent: number;
 
-	const percent_store = tweened(0, {
+	const percent_store = tweened(result.percent, {
 		duration: 1200,
 		easing: cubicInOut,
 	});
