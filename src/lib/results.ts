@@ -3,7 +3,7 @@ import { rand_ints_with_sum } from "./utils";
 const parties: party[] = [
 	{ color: "rgb(230,0,0)", name: "SPD" },
 	{ color: "black", name: "CDU" },
-	{ color: "darkorange", name: "FPD" },
+	{ color: "darkorange", name: "FDP" },
 	{ color: "darkgreen", name: "Grüne" },
 	{ color: "purple", name: "Linke" },
 	{ color: "firebrick", name: "PARTEI" },
