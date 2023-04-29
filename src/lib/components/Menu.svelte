@@ -26,7 +26,7 @@
 		<img src={caretleft} alt="arrow left" aria-hidden="true" />
 	</Button>
 
-	<div class="year">{year}</div>
+	<div class="year" aria-live="polite">{year}</div>
 	<Button
 		on:click={increment_year}
 		disabled={year >= max_year}
