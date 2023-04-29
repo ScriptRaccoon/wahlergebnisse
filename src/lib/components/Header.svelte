@@ -20,15 +20,15 @@
 		font-size: 2.5rem;
 	}
 
-	.star {
-		opacity: 0.5;
+	.star,
+	aside {
+		opacity: 0.7;
 	}
 
 	aside {
 		position: absolute;
 		top: 0.2rem;
 		right: 0.4rem;
-		opacity: 0.5;
 		font-size: small;
 	}
 </style>

@@ -1,19 +1,19 @@
 import { rand_ints_with_sum } from "./utils";
 
+const parties: party[] = [
+	{ color: "rgb(230,0,0)", name: "SPD" },
+	{ color: "black", name: "CDU" },
+	{ color: "darkorange", name: "FPD" },
+	{ color: "darkgreen", name: "Grüne" },
+	{ color: "purple", name: "Linke" },
+	{ color: "firebrick", name: "PARTEI" },
+];
+
 export function generate_random_results(): results {
 	const this_year = new Date().getFullYear();
 
 	const number_of_years = 10;
 	const results: results = [];
-
-	const parties: party[] = [
-		{ color: "red", name: "SPD" },
-		{ color: "black", name: "CDU" },
-		{ color: "darkorange", name: "FPD" },
-		{ color: "darkgreen", name: "Grüne" },
-		{ color: "purple", name: "Linke" },
-		{ color: "firebrick", name: "PARTEI" },
-	];
 
 	const initial_results: results = parties.map((party) => ({
 		party,
