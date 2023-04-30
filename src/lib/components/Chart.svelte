@@ -13,7 +13,6 @@
 <style>
 	.chart {
 		margin-block: 1.5rem;
-		padding-block: 1.5rem;
 		display: grid;
 		grid-auto-flow: row dense;
 		grid-template-columns: 2.5rem 1fr;
@@ -21,7 +20,7 @@
 		gap: 1rem;
 	}
 
-	@media (min-width: 34rem) {
+	@media (min-width: 36rem) {
 		.chart {
 			height: 40rem;
 			grid-auto-flow: column dense;

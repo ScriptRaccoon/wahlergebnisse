@@ -13,7 +13,7 @@ body {
 
 .card {
 	background-color: white;
-	padding: 1rem;
+	padding: 1.5rem;
 	box-shadow: 0.2rem 0.2rem 1.5rem #0002;
 	border-radius: 0.4rem;
 	isolation: isolate;

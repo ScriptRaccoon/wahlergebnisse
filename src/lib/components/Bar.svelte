@@ -63,9 +63,8 @@
 		font-size: 1.25rem;
 	}
 
-	@media (min-width: 34rem) {
+	@media (min-width: 36rem) {
 		.bar {
-			grid-row: 1;
 			grid-column: initial;
 			align-self: end;
 			height: calc(var(--percent) * 1%);
@@ -74,7 +73,6 @@
 		}
 
 		.percent {
-			grid-row: 2;
 			grid-column: initial;
 			align-self: start;
 			justify-self: center;

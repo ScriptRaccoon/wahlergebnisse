@@ -7,6 +7,7 @@ const parties: party[] = [
 	{ color: "darkgreen", name: "Grüne" },
 	{ color: "purple", name: "Linke" },
 	{ color: "#AC2031", name: "PARTEI" },
+	{ color: "#0089CF", name: "Klima" },
 ];
 
 export function generate_random_results(
