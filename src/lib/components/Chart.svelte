@@ -25,7 +25,7 @@
 		.chart {
 			height: 40rem;
 			grid-auto-flow: column dense;
-			grid-template-columns: unset;
+			grid-template-columns: initial;
 			grid-auto-columns: 1fr;
 			grid-template-rows: 1fr 2rem;
 			row-gap: 0.5rem;

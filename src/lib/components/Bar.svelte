@@ -21,17 +21,19 @@
 
 <div
 	class="bar"
-	class:small={result.percent < 5}
 	style:--color={result.party.color}
 	style:--percent={$percent_store * (100 / max_percent)}
 >
-	<span class="label">{result.party.name}</span>
+	<span class="label" class:small={result.percent < 5}
+		>{result.party.name}</span
+	>
 </div>
 
 <span class="percent">{Math.round($percent_store)}%</span>
 
 <style>
 	.bar {
+		grid-column: 2;
 		background-color: var(--color);
 		width: calc(var(--percent) * 1%);
 		height: 3rem;
@@ -39,21 +41,19 @@
 		align-items: center;
 		border-radius: 0.2rem;
 		position: relative;
-		grid-column: 2;
 	}
 
 	.label {
 		position: absolute;
 		color: white;
 		font-weight: bold;
-		z-index: 1;
 		transition: color 1000ms ease-in-out, left 500ms ease-in-out,
 			bottom 500ms ease-in-out;
 		left: 0;
 		padding: 0.25rem 0.5rem;
 	}
 
-	.bar.small .label {
+	.label.small {
 		color: black;
 		left: 100%;
 	}
@@ -66,27 +66,27 @@
 	@media (min-width: 34rem) {
 		.bar {
 			grid-row: 1;
-			grid-column: auto;
+			grid-column: initial;
 			align-self: end;
 			height: calc(var(--percent) * 1%);
 			width: 100%;
+			justify-content: center;
 		}
 
 		.percent {
 			grid-row: 2;
-			grid-column: auto;
+			grid-column: initial;
 			align-self: start;
 			justify-self: center;
 		}
 
 		.label {
-			width: 100%;
-			text-align: center;
+			left: initial;
 			bottom: 0;
 		}
 
-		.bar.small .label {
-			left: 0;
+		.label.small {
+			left: initial;
 			bottom: 100%;
 		}
 	}
