@@ -1,12 +1,12 @@
 import { rand_ints_with_sum } from "./utils";
 
 const parties: party[] = [
-	{ color: "rgb(230,0,0)", name: "SPD" },
-	{ color: "black", name: "CDU" },
-	{ color: "darkorange", name: "FDP" },
+	{ color: "#070707", name: "CDU" },
+	{ color: "#D70019", name: "SPD" },
+	{ color: "orange", name: "FDP" },
 	{ color: "darkgreen", name: "Grüne" },
 	{ color: "purple", name: "Linke" },
-	{ color: "firebrick", name: "PARTEI" },
+	{ color: "#AC2031", name: "PARTEI" },
 ];
 
 export function generate_random_results(
