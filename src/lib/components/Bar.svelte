@@ -24,12 +24,17 @@
 	style:--color={result.party.color}
 	style:--percent={$percent_store * (100 / max_percent)}
 >
-	<span class="label" class:small={result.percent < 5}
+	<span
+		class="label"
+		class:small={result.percent < 5}
+		aria-describedby="percent{result.party.name}"
 		>{result.party.name}</span
 	>
 </div>
 
-<span class="percent">{Math.round($percent_store)}%</span>
+<span class="percent" id="percent{result.party.name}">
+	{Math.round($percent_store)}%
+</span>
 
 <style>
 	.bar {
