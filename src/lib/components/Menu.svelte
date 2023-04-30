@@ -51,7 +51,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		gap: 1rem;
+		gap: 0.5rem;
 	}
 
 	img {
@@ -61,5 +61,7 @@
 	.year {
 		font-size: 2rem;
 		margin-bottom: 0.4rem;
+		width: 5rem;
+		text-align: center;
 	}
 </style>
